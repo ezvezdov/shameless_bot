@@ -1,4 +1,4 @@
-# Telegram bot for finding best jobs in shameless
+# Telegram bot for finding best jobs in [shameless](shameless.sinch.cz)
 
 Installation on arch linux:
 ```bash
