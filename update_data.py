@@ -29,8 +29,11 @@ def get_new_works():
     Get message with new jobs.
     """
 
-    f = open(path.join('data','old_data.json'))
-    old_data = json.load(f)
+    try:
+        f = open(path.join('data','old_data.json'))
+        old_data = json.load(f)
+    except:
+        old_data = dict()
 
     difference = list(set(new_data) - set(old_data))
     
