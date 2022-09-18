@@ -51,7 +51,7 @@ def send_update(message):
         pada.generate_data()
         reda.generate_refactored_data()
         upda.update_data()
-        message_to_send = upda.get_all_works()
+        message_to_send = upda.get_new_works()
         if message_to_send != upda.NO_JOBS_MESSAGE or not start:
             bot.send_message(message.chat.id, message_to_send,parse_mode= 'Markdown')
             start = True

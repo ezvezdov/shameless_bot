@@ -1,10 +1,10 @@
 import json
 from datetime import datetime, timezone
 from os import path
-import re
-from weakref import ref
 
 time_format = "%Y-%m-%dT%H:%M:%S%z"
+NO_PHOTO_REQUIREMENT = "Nen\u00ed nahr\u00e1na a schv\u00e1lena fotografie obli\u010deje. Po\u010dkejte pros\u00edm, a\u017e bude fotografie schv\u00e1lena."
+NO_RATING_REQUIREMENT = "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce."
 
 
 def utc_to_local(utc_dt):
@@ -116,6 +116,8 @@ def generate_refactored_data():
         # Add Requirements
         work['requirements'] = ""
         for current_requirement in value['requirements']:
+            if current_requirement['title'] == NO_PHOTO_REQUIREMENT or current_requirement['title'] == NO_RATING_REQUIREMENT:
+                continue
             work['requirements'] += "*Requirements*: "
             work['requirements'] += current_requirement['title'] + "\n"
 

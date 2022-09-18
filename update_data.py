@@ -17,7 +17,7 @@ def get_all_works():
 
     message = ""
     for work in new_data.values():
-        message += work['message'] # get_message_for_current_work(work)
+        message += work['message']
 
     if message == "":
         message = NO_JOBS_MESSAGE
@@ -37,12 +37,12 @@ def get_new_works():
     if len(difference) == 0:
         with open(path.join('data',"old_data.json"), "w") as outfile:
             json.dump(new_data, outfile)
-        return ""
+        return NO_JOBS_MESSAGE
 
     message = "А что это у нас такое, новыe паушальчики?\n\n"
 
     for key in difference:
-        message += new_data[key]['message'] #get_message_for_current_work(new_data[key])
+        message += new_data[key]['message']
 
     with open(path.join('data',"old_data.json"), "w") as outfile:
         json.dump(new_data, outfile)
