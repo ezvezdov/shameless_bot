@@ -5,6 +5,7 @@ from os import path
 time_format = "%Y-%m-%dT%H:%M:%S%z"
 NO_PHOTO_REQUIREMENT = "Nen\u00ed nahr\u00e1na a schv\u00e1lena fotografie obli\u010deje. Po\u010dkejte pros\u00edm, a\u017e bude fotografie schv\u00e1lena."
 NO_RATING_REQUIREMENT = "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce."
+URL_without_position = "https://shameless.sinch.cz/react/position/"
 
 
 def utc_to_local(utc_dt):
@@ -43,6 +44,9 @@ def get_message_for_current_work(work):
     # Add Requirements to message
     if work['requirements'] != "":
         message += work['requirements']
+    
+    # Add web-site
+    message += "[Web shameless](" + work['web'] + ")\n"
 
     message+="\n"
 
@@ -132,6 +136,9 @@ def generate_refactored_data():
         # 1 - crewboss
         # 0 - pracovnik
         work['role'] =  "Pracovn\u00edk" if value['role'] == 0 else "Crewboss"
+
+        # Add link to web-site of job
+        work['web'] = URL_without_position + str(value['id'])
         
         # Add whole message
         work['message'] = get_message_for_current_work(work)

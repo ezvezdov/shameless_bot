@@ -49,100 +49,6 @@
                     }
                 ]
             },
-            "187509": {
-                "id": 187509,
-                "shift": 87236,
-                "role": 0,
-                "profession": 3,
-                "location": 1961,
-                "featured": false,
-                "status": 2,
-                "locked": false,
-                "cancelled": false,
-                "provisional": false,
-                "freeCapacity": 1,
-                "totalCapacity": 7,
-                "startTime": "2022-09-22T08:00:00+00:00",
-                "endTime": "2022-09-22T14:00:00+00:00",
-                "meetingTimeInterval": 15,
-                "signOffTimeInterval": 96,
-                "description": null,
-                "requirements": [
-                    {
-                        "title": "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce.",
-                        "value": null,
-                        "failed": true
-                    },
-                    {
-                        "title": "Nen\u00ed nahr\u00e1na a schv\u00e1lena fotografie obli\u010deje. Po\u010dkejte pros\u00edm, a\u017e bude fotografie schv\u00e1lena.",
-                        "value": null,
-                        "failed": true
-                    }
-                ],
-                "requirementsFailed": true,
-                "connected": [],
-                "inConflict": false,
-                "conflicting": {
-                    "appointment": [],
-                    "position": [],
-                    "applicants": []
-                },
-                "applicants": false,
-                "tags": [
-                    {
-                        "name": "Audiolight service ",
-                        "description": "<p>Pr\u00e1ce pro firmu Audiolight Service.</p>\n\n<p>Pro holky je p\u0159ihl\u00e1\u0161en\u00ed mo\u017en\u00e9 pouze na sm\u011bny pro 8 lid\u00ed a v\u00edc, max 1 holka na 8 lid\u00ed.<br />\n\u00a0</p>\n\n<p>\u00a0</p>\n"
-                    }
-                ]
-            },
-            "187630": {
-                "id": 187630,
-                "shift": 87290,
-                "role": 0,
-                "profession": 3,
-                "location": 664,
-                "featured": false,
-                "status": 2,
-                "locked": false,
-                "cancelled": false,
-                "provisional": false,
-                "freeCapacity": 1,
-                "totalCapacity": 5,
-                "startTime": "2022-09-27T06:00:00+00:00",
-                "endTime": "2022-09-27T18:00:00+00:00",
-                "meetingTimeInterval": 15,
-                "signOffTimeInterval": 96,
-                "description": null,
-                "requirements": [
-                    {
-                        "title": "Pevn\u00fd rating nejm\u00e9n\u011b 51 (30% / Expirace: 96)",
-                        "value": "Pevn\u00fd rating nejm\u00e9n\u011b 51 (30% / Expirace: 96)",
-                        "failed": false
-                    },
-                    {
-                        "title": "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce.",
-                        "value": null,
-                        "failed": true
-                    },
-                    {
-                        "title": "Nen\u00ed nahr\u00e1na a schv\u00e1lena fotografie obli\u010deje. Po\u010dkejte pros\u00edm, a\u017e bude fotografie schv\u00e1lena.",
-                        "value": null,
-                        "failed": true
-                    }
-                ],
-                "requirementsFailed": true,
-                "connected": [
-                    187636
-                ],
-                "inConflict": false,
-                "conflicting": {
-                    "appointment": [],
-                    "position": [],
-                    "applicants": []
-                },
-                "applicants": false,
-                "tags": []
-            },
             "187639": {
                 "id": 187639,
                 "shift": 87290,
@@ -208,47 +114,6 @@
                         "value": "Pevn\u00fd rating nejm\u00e9n\u011b 51",
                         "failed": true
                     },
-                    {
-                        "title": "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce.",
-                        "value": null,
-                        "failed": true
-                    },
-                    {
-                        "title": "Nen\u00ed nahr\u00e1na a schv\u00e1lena fotografie obli\u010deje. Po\u010dkejte pros\u00edm, a\u017e bude fotografie schv\u00e1lena.",
-                        "value": null,
-                        "failed": true
-                    }
-                ],
-                "requirementsFailed": true,
-                "connected": [],
-                "inConflict": false,
-                "conflicting": {
-                    "appointment": [],
-                    "position": [],
-                    "applicants": []
-                },
-                "applicants": false,
-                "tags": []
-            },
-            "189028": {
-                "id": 189028,
-                "shift": 87812,
-                "role": 0,
-                "profession": 3,
-                "location": 634,
-                "featured": false,
-                "status": 2,
-                "locked": false,
-                "cancelled": false,
-                "provisional": false,
-                "freeCapacity": 1,
-                "totalCapacity": 2,
-                "startTime": "2022-09-23T08:00:00+00:00",
-                "endTime": "2022-09-23T14:00:00+00:00",
-                "meetingTimeInterval": 15,
-                "signOffTimeInterval": 96,
-                "description": "<p>\u010dasy s emohou lehce m\u011bnit</p>\n",
-                "requirements": [
                     {
                         "title": "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce.",
                         "value": null,
@@ -537,6 +402,47 @@
                 "applicants": false,
                 "tags": []
             },
+            "190443": {
+                "id": 190443,
+                "shift": 88220,
+                "role": 2,
+                "profession": 3,
+                "location": 4646,
+                "featured": false,
+                "status": 2,
+                "locked": false,
+                "cancelled": false,
+                "provisional": false,
+                "freeCapacity": 1,
+                "totalCapacity": 1,
+                "startTime": "2022-09-23T13:00:00+00:00",
+                "endTime": "2022-09-23T19:00:00+00:00",
+                "meetingTimeInterval": 15,
+                "signOffTimeInterval": 96,
+                "description": "<p>nakl\u00e1dka v Bohemia Sound Stroj\u00edrensk\u00e1 259/16, stavba v Edenu</p>\n",
+                "requirements": [
+                    {
+                        "title": "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce.",
+                        "value": null,
+                        "failed": true
+                    },
+                    {
+                        "title": "Nen\u00ed nahr\u00e1na a schv\u00e1lena fotografie obli\u010deje. Po\u010dkejte pros\u00edm, a\u017e bude fotografie schv\u00e1lena.",
+                        "value": null,
+                        "failed": true
+                    }
+                ],
+                "requirementsFailed": true,
+                "connected": [],
+                "inConflict": false,
+                "conflicting": {
+                    "appointment": [],
+                    "position": [],
+                    "applicants": []
+                },
+                "applicants": false,
+                "tags": []
+            },
             "190582": {
                 "id": 190582,
                 "shift": 88281,
@@ -681,6 +587,52 @@
                 },
                 "applicants": false,
                 "tags": []
+            },
+            "191566": {
+                "id": 191566,
+                "shift": 88644,
+                "role": 0,
+                "profession": 3,
+                "location": 604,
+                "featured": false,
+                "status": 2,
+                "locked": false,
+                "cancelled": false,
+                "provisional": false,
+                "freeCapacity": 1,
+                "totalCapacity": 17,
+                "startTime": "2022-09-22T19:00:00+00:00",
+                "endTime": "2022-09-23T04:00:00+00:00",
+                "meetingTimeInterval": 15,
+                "signOffTimeInterval": 96,
+                "description": "",
+                "requirements": [
+                    {
+                        "title": "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce.",
+                        "value": null,
+                        "failed": true
+                    },
+                    {
+                        "title": "Nen\u00ed nahr\u00e1na a schv\u00e1lena fotografie obli\u010deje. Po\u010dkejte pros\u00edm, a\u017e bude fotografie schv\u00e1lena.",
+                        "value": null,
+                        "failed": true
+                    }
+                ],
+                "requirementsFailed": true,
+                "connected": [],
+                "inConflict": false,
+                "conflicting": {
+                    "appointment": [],
+                    "position": [],
+                    "applicants": []
+                },
+                "applicants": false,
+                "tags": [
+                    {
+                        "name": "Ground Support GS",
+                        "description": "<p>Pr\u00e1ce bude obsahovat \u010dinnosti souvisej\u00edc\u00ed s instalac\u00ed GS. Kvalitn\u00ed rukavice a pevn\u00e1 obuv jsou p\u0159i t\u00e9to \u010dinnosti opravdu nezbytn\u00e9.&nbsp;</p>\r\n"
+                    }
+                ]
             },
             "191567": {
                 "id": 191567,
@@ -847,8 +799,8 @@
                 "description": "",
                 "requirements": [
                     {
-                        "title": "Pevn\u00fd rating nejm\u00e9n\u011b 51 (30% / Expirace: 96)",
-                        "value": "Pevn\u00fd rating nejm\u00e9n\u011b 51 (30% / Expirace: 96)",
+                        "title": "Pevn\u00fd rating nejm\u00e9n\u011b 51 (30%)",
+                        "value": "Pevn\u00fd rating nejm\u00e9n\u011b 51 (30%)",
                         "failed": true
                     },
                     {
@@ -2005,52 +1957,6 @@
                     }
                 ]
             },
-            "193380": {
-                "id": 193380,
-                "shift": 89359,
-                "role": 2,
-                "profession": 3,
-                "location": 382,
-                "featured": false,
-                "status": 2,
-                "locked": false,
-                "cancelled": false,
-                "provisional": false,
-                "freeCapacity": 1,
-                "totalCapacity": 1,
-                "startTime": "2022-10-09T21:55:00+00:00",
-                "endTime": "2022-10-10T05:55:00+00:00",
-                "meetingTimeInterval": 15,
-                "signOffTimeInterval": 200,
-                "description": "<p>Sraz na V\u00e1clavsk\u00e9 n\u00e1m\u011bst\u00ed, konec sm\u011bny v\u00a0\u017dlut\u00fdch l\u00e1zn\u00edch, deinstalace pevn\u00fdch st\u00e1nk\u016f pro trhy.</p>\n",
-                "requirements": [
-                    {
-                        "title": "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce.",
-                        "value": null,
-                        "failed": true
-                    },
-                    {
-                        "title": "Nen\u00ed nahr\u00e1na a schv\u00e1lena fotografie obli\u010deje. Po\u010dkejte pros\u00edm, a\u017e bude fotografie schv\u00e1lena.",
-                        "value": null,
-                        "failed": true
-                    }
-                ],
-                "requirementsFailed": true,
-                "connected": [],
-                "inConflict": false,
-                "conflicting": {
-                    "appointment": [],
-                    "position": [],
-                    "applicants": []
-                },
-                "applicants": false,
-                "tags": [
-                    {
-                        "name": "Pr\u00e1ce venku",
-                        "description": "<p>Pr\u00e1ce prob\u00edh\u00e1\u00a0venku.\u00a0Je t\u0159eba se pat\u0159i\u010dn\u011b obl\u00e9knout\u00a0a po\u010d\u00edtat s mo\u017enou nep\u0159\u00edzn\u00ed\u00a0po\u010das\u00ed.</p>\n"
-                    }
-                ]
-            },
             "193381": {
                 "id": 193381,
                 "shift": 89360,
@@ -2551,54 +2457,6 @@
                     }
                 ]
             },
-            "193501": {
-                "id": 193501,
-                "shift": 89403,
-                "role": 0,
-                "profession": 3,
-                "location": 756,
-                "featured": false,
-                "status": 2,
-                "locked": false,
-                "cancelled": false,
-                "provisional": false,
-                "freeCapacity": 1,
-                "totalCapacity": 1,
-                "startTime": "2022-09-22T04:00:00+00:00",
-                "endTime": "2022-09-22T12:00:00+00:00",
-                "meetingTimeInterval": 15,
-                "signOffTimeInterval": 96,
-                "description": "<p>sm\u011bna kon\u010d\u00ed na \u017dof\u00edn\u011b</p>\n",
-                "requirements": [
-                    {
-                        "title": "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce.",
-                        "value": null,
-                        "failed": true
-                    },
-                    {
-                        "title": "Nen\u00ed nahr\u00e1na a schv\u00e1lena fotografie obli\u010deje. Po\u010dkejte pros\u00edm, a\u017e bude fotografie schv\u00e1lena.",
-                        "value": null,
-                        "failed": true
-                    }
-                ],
-                "requirementsFailed": true,
-                "connected": [
-                    193503
-                ],
-                "inConflict": false,
-                "conflicting": {
-                    "appointment": [],
-                    "position": [],
-                    "applicants": []
-                },
-                "applicants": false,
-                "tags": [
-                    {
-                        "name": "AV Media",
-                        "description": "<p><em><strong>B\u011bhem pr\u00e1ce dodr\u017eujte n\u00e1sleduj\u00edc\u00ed pravidla:</strong></em></p>\n\n<ol><li>Noste\u00a0\u010dist\u00e9 a zachoval\u00e9\u00a0oble\u010den\u00ed, v\u00a0interi\u00e9rech nenoste \u010depice a slune\u010dn\u00ed br\u00fdle</li>\n\t<li>Chovejte se ke sv\u00fdm koleg\u016fm a z\u00e1kazn\u00edk\u016fm a dal\u0161\u00edm obchodn\u00edm partner\u016fm d\u016fstojn\u011b, \u010destn\u011b a slu\u0161n\u011b</li>\n\t<li>Sv\u00e9 negativn\u00ed n\u00e1zory na cokoliv si nechte pro sebe, p\u0159\u00edpadn\u011b \u0159e\u0161te soukrom\u011b p\u0159es crewbosse</li>\n\t<li>P\u0159ed klientem\u00a0a jeho hosty neku\u0159te\u00a0a nejezte - pou\u017eijte pro to vyhrazen\u00e9 prostory b\u011bhem pauzy.</li>\n\t<li>Ned\u011blejte zbyte\u010dn\u00fd\u00a0hluk</li>\n\t<li>Pou\u017e\u00edvejte toalety v z\u00e1zem\u00ed ur\u010den\u00e9 person\u00e1lu</li>\n\t<li>Telefon m\u011bjte p\u0159i pr\u00e1ci ztlumen\u00fd a uklizen\u00fd! (za u\u017e\u00edv\u00e1n\u00ed telefonu b\u011bhem sm\u011bny m\u016f\u017ee b\u00fdt postih)</li>\n\t<li>Je p\u0159\u00edsn\u011b zak\u00e1z\u00e1no po\u0159izovat jak\u00e9koli soukrom\u00e9 obrazov\u00e9, zvukov\u00e9 \u010di fotografick\u00e9 z\u00e1znamy z\u00a0klientsk\u00fdch akc\u00ed a sd\u00edlet jak\u00fdkoliv obsah t\u00fdkaj\u00edc\u00ed se akce</li>\n</ol><p>AV Media si <strong>zakl\u00e1d\u00e1j\u00ed na vzhledu a chov\u00e1n\u00ed pracovn\u00edk\u016f</strong>.\u00a0<em><strong>Nen\u00ed vhodn\u00e1 pro lidi s v\u00fdrazn\u00fdm tetovan\u00edm, piercingem, tunely, extravagantn\u00edm\u00a0\u00fa\u010desem\u00a0a podobn\u011b</strong></em>. U prac\u00ed na skladu to nevad\u00ed - <em>pozor na pr\u00e1ce, kter\u00e9 za\u010d\u00ednaj\u00ed na skladu, ale pak se jede instalovat </em>- to je v\u017edy uvedeno v popisu.</p>\n\n<p><span style=\"font-size:11px;\">Pokud ti nen\u00ed jasn\u00e9, zda je pro tebe sm\u011bna vhodn\u00e1, napi\u0161 n\u00e1m email na crew@shameless.cz.</span></p>\n\n<p>Vhodn\u00e9 oble\u010den\u00ed:</p>\n\n<p>Je t\u0159eba m\u00edt<strong>\u00a0dlouh\u00e9 \u010dern\u00e9 kalhoty</strong>, \u010distou\u00a0<strong>uzav\u0159enou obuv</strong> a\u00a0<strong>\u010dern\u00e9\u00a0tri\u010dko bez potisku</strong>,<strong> </strong><strong>\u010di ko\u0161ili. </strong><em>(NE ka\u0165asy, NE triko Shameless)</em></p>\n"
-                    }
-                ]
-            },
             "193504": {
                 "id": 193504,
                 "shift": 89405,
@@ -2746,47 +2604,6 @@
                         "description": "<p>Pr\u00e1ce prob\u00edhaj\u00ed v prostor\u00e1ch O2 Areny.</p>\n\n<p>Sraz je u person\u00e1ln\u00edho vchodu \u010d\u00edslo 31. Na akc\u00edch v O2 plat\u00ed <strong>sraz 30 minut p\u0159ed za\u010d\u00e1tkem pr\u00e1ce</strong>.</p>\n\n<p>Po\u010d\u00edtej s t\u00edm, \u017ee se budou odes\u00edlat akreditace a po jejich odesl\u00e1n\u00ed u\u017e nebude mo\u017en\u00e9 odhla\u0161ov\u00e1n\u00ed.</p>\n"
                     }
                 ]
-            },
-            "193522": {
-                "id": 193522,
-                "shift": 89417,
-                "role": 0,
-                "profession": 3,
-                "location": 570,
-                "featured": false,
-                "status": 2,
-                "locked": false,
-                "cancelled": false,
-                "provisional": false,
-                "freeCapacity": 1,
-                "totalCapacity": 3,
-                "startTime": "2022-09-24T04:00:00+00:00",
-                "endTime": "2022-09-24T12:00:00+00:00",
-                "meetingTimeInterval": 15,
-                "signOffTimeInterval": 96,
-                "description": "<ol><li>rozestaven\u00ed / deinstalace z\u00e1bran / plot\u016f pod\u00e9l are\u00e1lu Fanparku</li>\n\t<li>pomoc p\u0159i brandingu / plachtov\u00e1n\u00ed plot\u016f\u00a0</li>\n\t<li>pomoc p\u0159i stavb\u011b / deinstalaci n\u016f\u017ekov\u00fdch stan\u016f</li>\n\t<li>pomoc p\u0159i stavb\u011b / deinstalaci nafukovac\u00edch prvk\u016f</li>\n\t<li>dohledov\u00e1 asistence u vybran\u00fdch aktivit Fanparku</li>\n\t<li>ostatn\u00ed drobn\u00e9 pr\u00e1ce v r\u00e1mci p\u0159esunu materi\u00e1lu</li>\n</ol>",
-                "requirements": [
-                    {
-                        "title": "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce.",
-                        "value": null,
-                        "failed": true
-                    },
-                    {
-                        "title": "Nen\u00ed nahr\u00e1na a schv\u00e1lena fotografie obli\u010deje. Po\u010dkejte pros\u00edm, a\u017e bude fotografie schv\u00e1lena.",
-                        "value": null,
-                        "failed": true
-                    }
-                ],
-                "requirementsFailed": true,
-                "connected": [],
-                "inConflict": false,
-                "conflicting": {
-                    "appointment": [],
-                    "position": [],
-                    "applicants": []
-                },
-                "applicants": false,
-                "tags": []
             },
             "193527": {
                 "id": 193527,
@@ -3026,6 +2843,10 @@
                 "applicants": false,
                 "tags": [
                     {
+                        "name": "BONUS",
+                        "description": "<p>Ke mzd\u011b za tuto\u00a0pr\u00e1ci je p\u0159id\u00e1n bonus!</p>\n"
+                    },
+                    {
                         "name": "AV Media",
                         "description": "<p><em><strong>B\u011bhem pr\u00e1ce dodr\u017eujte n\u00e1sleduj\u00edc\u00ed pravidla:</strong></em></p>\n\n<ol><li>Noste\u00a0\u010dist\u00e9 a zachoval\u00e9\u00a0oble\u010den\u00ed, v\u00a0interi\u00e9rech nenoste \u010depice a slune\u010dn\u00ed br\u00fdle</li>\n\t<li>Chovejte se ke sv\u00fdm koleg\u016fm a z\u00e1kazn\u00edk\u016fm a dal\u0161\u00edm obchodn\u00edm partner\u016fm d\u016fstojn\u011b, \u010destn\u011b a slu\u0161n\u011b</li>\n\t<li>Sv\u00e9 negativn\u00ed n\u00e1zory na cokoliv si nechte pro sebe, p\u0159\u00edpadn\u011b \u0159e\u0161te soukrom\u011b p\u0159es crewbosse</li>\n\t<li>P\u0159ed klientem\u00a0a jeho hosty neku\u0159te\u00a0a nejezte - pou\u017eijte pro to vyhrazen\u00e9 prostory b\u011bhem pauzy.</li>\n\t<li>Ned\u011blejte zbyte\u010dn\u00fd\u00a0hluk</li>\n\t<li>Pou\u017e\u00edvejte toalety v z\u00e1zem\u00ed ur\u010den\u00e9 person\u00e1lu</li>\n\t<li>Telefon m\u011bjte p\u0159i pr\u00e1ci ztlumen\u00fd a uklizen\u00fd! (za u\u017e\u00edv\u00e1n\u00ed telefonu b\u011bhem sm\u011bny m\u016f\u017ee b\u00fdt postih)</li>\n\t<li>Je p\u0159\u00edsn\u011b zak\u00e1z\u00e1no po\u0159izovat jak\u00e9koli soukrom\u00e9 obrazov\u00e9, zvukov\u00e9 \u010di fotografick\u00e9 z\u00e1znamy z\u00a0klientsk\u00fdch akc\u00ed a sd\u00edlet jak\u00fdkoliv obsah t\u00fdkaj\u00edc\u00ed se akce</li>\n</ol><p>AV Media si <strong>zakl\u00e1d\u00e1j\u00ed na vzhledu a chov\u00e1n\u00ed pracovn\u00edk\u016f</strong>.\u00a0<em><strong>Nen\u00ed vhodn\u00e1 pro lidi s v\u00fdrazn\u00fdm tetovan\u00edm, piercingem, tunely, extravagantn\u00edm\u00a0\u00fa\u010desem\u00a0a podobn\u011b</strong></em>. U prac\u00ed na skladu to nevad\u00ed - <em>pozor na pr\u00e1ce, kter\u00e9 za\u010d\u00ednaj\u00ed na skladu, ale pak se jede instalovat </em>- to je v\u017edy uvedeno v popisu.</p>\n\n<p><span style=\"font-size:11px;\">Pokud ti nen\u00ed jasn\u00e9, zda je pro tebe sm\u011bna vhodn\u00e1, napi\u0161 n\u00e1m email na crew@shameless.cz.</span></p>\n\n<p>Vhodn\u00e9 oble\u010den\u00ed:</p>\n\n<p>Je t\u0159eba m\u00edt<strong>\u00a0dlouh\u00e9 \u010dern\u00e9 kalhoty</strong>, \u010distou\u00a0<strong>uzav\u0159enou obuv</strong> a\u00a0<strong>\u010dern\u00e9\u00a0tri\u010dko bez potisku</strong>,<strong> </strong><strong>\u010di ko\u0161ili. </strong><em>(NE ka\u0165asy, NE triko Shameless)</em></p>\n"
                     }
@@ -3071,6 +2892,10 @@
                 },
                 "applicants": false,
                 "tags": [
+                    {
+                        "name": "BONUS",
+                        "description": "<p>Ke mzd\u011b za tuto\u00a0pr\u00e1ci je p\u0159id\u00e1n bonus!</p>\n"
+                    },
                     {
                         "name": "AV Media",
                         "description": "<p><em><strong>B\u011bhem pr\u00e1ce dodr\u017eujte n\u00e1sleduj\u00edc\u00ed pravidla:</strong></em></p>\n\n<ol><li>Noste\u00a0\u010dist\u00e9 a zachoval\u00e9\u00a0oble\u010den\u00ed, v\u00a0interi\u00e9rech nenoste \u010depice a slune\u010dn\u00ed br\u00fdle</li>\n\t<li>Chovejte se ke sv\u00fdm koleg\u016fm a z\u00e1kazn\u00edk\u016fm a dal\u0161\u00edm obchodn\u00edm partner\u016fm d\u016fstojn\u011b, \u010destn\u011b a slu\u0161n\u011b</li>\n\t<li>Sv\u00e9 negativn\u00ed n\u00e1zory na cokoliv si nechte pro sebe, p\u0159\u00edpadn\u011b \u0159e\u0161te soukrom\u011b p\u0159es crewbosse</li>\n\t<li>P\u0159ed klientem\u00a0a jeho hosty neku\u0159te\u00a0a nejezte - pou\u017eijte pro to vyhrazen\u00e9 prostory b\u011bhem pauzy.</li>\n\t<li>Ned\u011blejte zbyte\u010dn\u00fd\u00a0hluk</li>\n\t<li>Pou\u017e\u00edvejte toalety v z\u00e1zem\u00ed ur\u010den\u00e9 person\u00e1lu</li>\n\t<li>Telefon m\u011bjte p\u0159i pr\u00e1ci ztlumen\u00fd a uklizen\u00fd! (za u\u017e\u00edv\u00e1n\u00ed telefonu b\u011bhem sm\u011bny m\u016f\u017ee b\u00fdt postih)</li>\n\t<li>Je p\u0159\u00edsn\u011b zak\u00e1z\u00e1no po\u0159izovat jak\u00e9koli soukrom\u00e9 obrazov\u00e9, zvukov\u00e9 \u010di fotografick\u00e9 z\u00e1znamy z\u00a0klientsk\u00fdch akc\u00ed a sd\u00edlet jak\u00fdkoliv obsah t\u00fdkaj\u00edc\u00ed se akce</li>\n</ol><p>AV Media si <strong>zakl\u00e1d\u00e1j\u00ed na vzhledu a chov\u00e1n\u00ed pracovn\u00edk\u016f</strong>.\u00a0<em><strong>Nen\u00ed vhodn\u00e1 pro lidi s v\u00fdrazn\u00fdm tetovan\u00edm, piercingem, tunely, extravagantn\u00edm\u00a0\u00fa\u010desem\u00a0a podobn\u011b</strong></em>. U prac\u00ed na skladu to nevad\u00ed - <em>pozor na pr\u00e1ce, kter\u00e9 za\u010d\u00ednaj\u00ed na skladu, ale pak se jede instalovat </em>- to je v\u017edy uvedeno v popisu.</p>\n\n<p><span style=\"font-size:11px;\">Pokud ti nen\u00ed jasn\u00e9, zda je pro tebe sm\u011bna vhodn\u00e1, napi\u0161 n\u00e1m email na crew@shameless.cz.</span></p>\n\n<p>Vhodn\u00e9 oble\u010den\u00ed:</p>\n\n<p>Je t\u0159eba m\u00edt<strong>\u00a0dlouh\u00e9 \u010dern\u00e9 kalhoty</strong>, \u010distou\u00a0<strong>uzav\u0159enou obuv</strong> a\u00a0<strong>\u010dern\u00e9\u00a0tri\u010dko bez potisku</strong>,<strong> </strong><strong>\u010di ko\u0161ili. </strong><em>(NE ka\u0165asy, NE triko Shameless)</em></p>\n"
@@ -3121,51 +2946,6 @@
                         "description": "<p>Pr\u00e1ce prob\u00edhaj\u00ed v prostor\u00e1ch O2 Areny.</p>\n\n<p>Sraz je u person\u00e1ln\u00edho vchodu \u010d\u00edslo 31. Na akc\u00edch v O2 plat\u00ed <strong>sraz 30 minut p\u0159ed za\u010d\u00e1tkem pr\u00e1ce</strong>.</p>\n\n<p>Po\u010d\u00edtej s t\u00edm, \u017ee se budou odes\u00edlat akreditace a po jejich odesl\u00e1n\u00ed u\u017e nebude mo\u017en\u00e9 odhla\u0161ov\u00e1n\u00ed.</p>\n"
                     }
                 ]
-            },
-            "187636": {
-                "id": 187636,
-                "shift": 87293,
-                "role": 0,
-                "profession": 3,
-                "location": 664,
-                "featured": false,
-                "status": 2,
-                "locked": false,
-                "cancelled": false,
-                "provisional": false,
-                "freeCapacity": 1,
-                "totalCapacity": 7,
-                "startTime": "2022-09-28T16:00:00+00:00",
-                "endTime": "2022-09-28T22:00:00+00:00",
-                "meetingTimeInterval": 15,
-                "signOffTimeInterval": 96,
-                "description": null,
-                "requirements": [
-                    {
-                        "title": "Pevn\u00fd rating nejm\u00e9n\u011b 51 (30% / Expirace: 96)",
-                        "value": "Pevn\u00fd rating nejm\u00e9n\u011b 51 (30% / Expirace: 96)",
-                        "failed": false
-                    },
-                    {
-                        "title": "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce.",
-                        "value": null,
-                        "failed": true
-                    },
-                    {
-                        "title": "Nen\u00ed nahr\u00e1na a schv\u00e1lena fotografie obli\u010deje. Po\u010dkejte pros\u00edm, a\u017e bude fotografie schv\u00e1lena.",
-                        "value": null,
-                        "failed": true
-                    }
-                ],
-                "requirementsFailed": true,
-                "inConflict": false,
-                "conflicting": {
-                    "appointment": [],
-                    "position": [],
-                    "applicants": []
-                },
-                "applicants": false,
-                "tags": []
             },
             "190402": {
                 "id": 190402,
@@ -3383,8 +3163,8 @@
                 "description": "",
                 "requirements": [
                     {
-                        "title": "Pevn\u00fd rating nejm\u00e9n\u011b 51 (30% / Expirace: 96)",
-                        "value": "Pevn\u00fd rating nejm\u00e9n\u011b 51 (30% / Expirace: 96)",
+                        "title": "Pevn\u00fd rating nejm\u00e9n\u011b 51 (30%)",
+                        "value": "Pevn\u00fd rating nejm\u00e9n\u011b 51 (30%)",
                         "failed": true
                     },
                     {
@@ -3995,51 +3775,6 @@
                     }
                 ]
             },
-            "193503": {
-                "id": 193503,
-                "shift": 89404,
-                "role": 0,
-                "profession": 3,
-                "location": 416,
-                "featured": false,
-                "status": 2,
-                "locked": false,
-                "cancelled": false,
-                "provisional": false,
-                "freeCapacity": 1,
-                "totalCapacity": 1,
-                "startTime": "2022-09-22T21:00:00+00:00",
-                "endTime": "2022-09-23T01:00:00+00:00",
-                "meetingTimeInterval": 15,
-                "signOffTimeInterval": 96,
-                "description": "<p>\u00a0</p>\n\n<p>sm\u011bna kon\u010d\u00ed na Harf\u011b</p>\n",
-                "requirements": [
-                    {
-                        "title": "Nem\u00e1te dostate\u010dn\u00fd rating na samostatn\u00e9 p\u0159ihla\u0161ov\u00e1n\u00ed na pr\u00e1ce.",
-                        "value": null,
-                        "failed": true
-                    },
-                    {
-                        "title": "Nen\u00ed nahr\u00e1na a schv\u00e1lena fotografie obli\u010deje. Po\u010dkejte pros\u00edm, a\u017e bude fotografie schv\u00e1lena.",
-                        "value": null,
-                        "failed": true
-                    }
-                ],
-                "requirementsFailed": true,
-                "inConflict": false,
-                "conflicting": {
-                    "appointment": [],
-                    "position": [],
-                    "applicants": []
-                },
-                "applicants": false,
-                "tags": [
-                    {
-                        "name": "AV Media",
-                        "description": "<p><em><strong>B\u011bhem pr\u00e1ce dodr\u017eujte n\u00e1sleduj\u00edc\u00ed pravidla:</strong></em></p>\n\n<ol><li>Noste\u00a0\u010dist\u00e9 a zachoval\u00e9\u00a0oble\u010den\u00ed, v\u00a0interi\u00e9rech nenoste \u010depice a slune\u010dn\u00ed br\u00fdle</li>\n\t<li>Chovejte se ke sv\u00fdm koleg\u016fm a z\u00e1kazn\u00edk\u016fm a dal\u0161\u00edm obchodn\u00edm partner\u016fm d\u016fstojn\u011b, \u010destn\u011b a slu\u0161n\u011b</li>\n\t<li>Sv\u00e9 negativn\u00ed n\u00e1zory na cokoliv si nechte pro sebe, p\u0159\u00edpadn\u011b \u0159e\u0161te soukrom\u011b p\u0159es crewbosse</li>\n\t<li>P\u0159ed klientem\u00a0a jeho hosty neku\u0159te\u00a0a nejezte - pou\u017eijte pro to vyhrazen\u00e9 prostory b\u011bhem pauzy.</li>\n\t<li>Ned\u011blejte zbyte\u010dn\u00fd\u00a0hluk</li>\n\t<li>Pou\u017e\u00edvejte toalety v z\u00e1zem\u00ed ur\u010den\u00e9 person\u00e1lu</li>\n\t<li>Telefon m\u011bjte p\u0159i pr\u00e1ci ztlumen\u00fd a uklizen\u00fd! (za u\u017e\u00edv\u00e1n\u00ed telefonu b\u011bhem sm\u011bny m\u016f\u017ee b\u00fdt postih)</li>\n\t<li>Je p\u0159\u00edsn\u011b zak\u00e1z\u00e1no po\u0159izovat jak\u00e9koli soukrom\u00e9 obrazov\u00e9, zvukov\u00e9 \u010di fotografick\u00e9 z\u00e1znamy z\u00a0klientsk\u00fdch akc\u00ed a sd\u00edlet jak\u00fdkoliv obsah t\u00fdkaj\u00edc\u00ed se akce</li>\n</ol><p>AV Media si <strong>zakl\u00e1d\u00e1j\u00ed na vzhledu a chov\u00e1n\u00ed pracovn\u00edk\u016f</strong>.\u00a0<em><strong>Nen\u00ed vhodn\u00e1 pro lidi s v\u00fdrazn\u00fdm tetovan\u00edm, piercingem, tunely, extravagantn\u00edm\u00a0\u00fa\u010desem\u00a0a podobn\u011b</strong></em>. U prac\u00ed na skladu to nevad\u00ed - <em>pozor na pr\u00e1ce, kter\u00e9 za\u010d\u00ednaj\u00ed na skladu, ale pak se jede instalovat </em>- to je v\u017edy uvedeno v popisu.</p>\n\n<p><span style=\"font-size:11px;\">Pokud ti nen\u00ed jasn\u00e9, zda je pro tebe sm\u011bna vhodn\u00e1, napi\u0161 n\u00e1m email na crew@shameless.cz.</span></p>\n\n<p>Vhodn\u00e9 oble\u010den\u00ed:</p>\n\n<p>Je t\u0159eba m\u00edt<strong>\u00a0dlouh\u00e9 \u010dern\u00e9 kalhoty</strong>, \u010distou\u00a0<strong>uzav\u0159enou obuv</strong> a\u00a0<strong>\u010dern\u00e9\u00a0tri\u010dko bez potisku</strong>,<strong> </strong><strong>\u010di ko\u0161ili. </strong><em>(NE ka\u0165asy, NE triko Shameless)</em></p>\n"
-                    }
-                ]
-            },
             "193506": {
                 "id": 193506,
                 "shift": 89406,
@@ -4249,10 +3984,6 @@
                 "id": 762,
                 "name": "BACKLINE SERVICES s.r.o."
             },
-            "792": {
-                "id": 792,
-                "name": "V\u00fdstavi\u0161t\u011b Praha, a.s."
-            },
             "802": {
                 "id": 802,
                 "name": "At. 5D s.r.o."
@@ -4280,10 +4011,6 @@
             "1234": {
                 "id": 1234,
                 "name": "Paradox, z.s."
-            },
-            "1238": {
-                "id": 1238,
-                "name": "STES a.s."
             }
         },
         "User": [],
@@ -4292,13 +4019,6 @@
                 "id": 79515,
                 "name": "Kapit\u00e1n Demo 2022 - Stavba",
                 "company": 70,
-                "feedbackStatus": 0,
-                "presence": false
-            },
-            "87236": {
-                "id": 87236,
-                "name": "TEDxUNYP - Mont\u00e1\u017e",
-                "company": 8,
                 "feedbackStatus": 0,
                 "presence": false
             },
@@ -4313,13 +4033,6 @@
                 "id": 87591,
                 "name": "N\u00e1rodn\u00ed d\u016fm na Sm\u00edchov\u011b - Likvidace",
                 "company": 55,
-                "feedbackStatus": 0,
-                "presence": false
-            },
-            "87812": {
-                "id": 87812,
-                "name": "Dny IZS 2022 - Stavba",
-                "company": 792,
                 "feedbackStatus": 0,
                 "presence": false
             },
@@ -4552,13 +4265,6 @@
                 "feedbackStatus": 0,
                 "presence": false
             },
-            "89359": {
-                "id": 89359,
-                "name": "Svatov\u00e1clavsk\u00e9 trhy 2022 - N\u00e1m\u011bst\u00ed republiky - Deinstalace",
-                "company": 595,
-                "feedbackStatus": 0,
-                "presence": false
-            },
             "89360": {
                 "id": 89360,
                 "name": "Svatov\u00e1clavsk\u00e9 trhy 2022 - N\u00e1m\u011bst\u00ed republiky - Instalace",
@@ -4626,13 +4332,6 @@
                 "feedbackStatus": 0,
                 "presence": false
             },
-            "89417": {
-                "id": 89417,
-                "name": "FANPARK REPRE  - STAVBA",
-                "company": 1238,
-                "feedbackStatus": 0,
-                "presence": false
-            },
             "89420": {
                 "id": 89420,
                 "name": "St\u011bhov\u00e1n\u00ed dekorac\u00ed Hole\u0161ovice - St\u011bhov\u00e1n\u00ed dekorac\u00ed",
@@ -4650,12 +4349,6 @@
             "79514": {
                 "id": 79514,
                 "name": "Kapit\u00e1n Demo 2022 - Likvidace",
-                "feedbackStatus": 0,
-                "presence": false
-            },
-            "87293": {
-                "id": 87293,
-                "name": "DM \u017dL - Load OUT Balba",
                 "feedbackStatus": 0,
                 "presence": false
             },
@@ -4710,6 +4403,12 @@
             "89311": {
                 "id": 89311,
                 "name": "Cross Club - Likvidace",
+                "feedbackStatus": 0,
+                "presence": false
+            },
+            "89359": {
+                "id": 89359,
+                "name": "Svatov\u00e1clavsk\u00e9 trhy 2022 - N\u00e1m\u011bst\u00ed republiky - Deinstalace",
                 "feedbackStatus": 0,
                 "presence": false
             },
@@ -4795,17 +4494,6 @@
                 "placeId": "",
                 "description": ""
             },
-            "382": {
-                "id": 382,
-                "name": "N\u00e1m\u011bst\u00ed Republiky",
-                "address": "N\u00e1m\u011bst\u00ed Republiky, N\u00e1m\u011bst\u00ed Republiky, Nov\u00e9 M\u011bsto, 110 00",
-                "point": {
-                    "lat": 50.08842509999999,
-                    "lng": 14.4291529
-                },
-                "placeId": "ChIJgyc03eqUC0cRTyRMVEzvK2A",
-                "description": ""
-            },
             "384": {
                 "id": 384,
                 "name": "N\u00e1rodn\u00ed D\u016fm Na Sm\u00edchov\u011b",
@@ -4839,17 +4527,6 @@
                 "placeId": "",
                 "description": ""
             },
-            "570": {
-                "id": 570,
-                "name": "Stadion Eden",
-                "address": "Stadion Eden, U Slavie 1540/2a, Praha 10 - Vr\u0161ovice, 100 00",
-                "point": {
-                    "lat": 50.068236875585264,
-                    "lng": 14.470424443983575
-                },
-                "placeId": "",
-                "description": ""
-            },
             "604": {
                 "id": 604,
                 "name": "Tipsport Arena - vchod \u010d. 32",
@@ -4857,17 +4534,6 @@
                 "point": {
                     "lat": 50.10707212827461,
                     "lng": 14.43399438298502
-                },
-                "placeId": "",
-                "description": ""
-            },
-            "634": {
-                "id": 634,
-                "name": "V\u00fdstavi\u0161t\u011b Hole\u0161ovice",
-                "address": "V\u00fdstavi\u0161t\u011b Hole\u0161ovice, Are\u00e1l v\u00fdstavi\u0161t\u011b, Praha 7 - Hole\u0161ovice",
-                "point": {
-                    "lat": 50.1075801770278,
-                    "lng": 14.429145951258079
                 },
                 "placeId": "",
                 "description": ""
@@ -4909,11 +4575,6 @@
                 "id": 1424,
                 "name": "klub 1435mm / N\u00e1kladov\u00e9 N\u00e1dra\u017e\u00ed \u017di\u017ekov",
                 "address": "klub 1435mm / N\u00e1kladov\u00e9 N\u00e1dra\u017e\u00ed \u017di\u017ekov, \u017delivsk\u00e9ho 2, Praha 3 - \u017di\u017ekov"
-            },
-            "1961": {
-                "id": 1961,
-                "name": "Hala Sparty - Podvinn\u00fd Ml\u00fdn",
-                "address": "Hala Sparty - Podvinn\u00fd Ml\u00fdn, Kovaneck\u00e1 27, Praha, 190 00"
             },
             "2242": {
                 "id": 2242,
@@ -5044,20 +4705,19 @@
     "result": {
         "positionIds": [
             167313,
-            187509,
-            187630,
             187639,
             188574,
-            189028,
             190351,
             190370,
             190398,
             190412,
             190413,
             190434,
+            190443,
             190582,
             190784,
             191288,
+            191566,
             191567,
             191569,
             191578,
@@ -5085,7 +4745,6 @@
             193276,
             193320,
             193374,
-            193380,
             193381,
             193427,
             193428,
@@ -5096,11 +4755,9 @@
             193496,
             193497,
             193500,
-            193501,
             193504,
             193505,
             193513,
-            193522,
             193527,
             193530,
             193546,
@@ -5111,7 +4768,7 @@
         "featuredPositionIds": []
     },
     "meta": {
-        "count": 64,
+        "count": 60,
         "files": []
     },
     "messages": []
