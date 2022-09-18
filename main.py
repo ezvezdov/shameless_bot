@@ -1,7 +1,8 @@
 import json
 from time import sleep
-from os import path
+from os import path, remove
 import telebot
+from telebot import types
 
 # https://github.com/eternnoir/pyTelegramBotAPI
 # https://habr.com/ru/post/442800/
@@ -14,6 +15,11 @@ with open(path.join('data',"old_data.json"), "w") as outfile:
 # create telegram bot
 bot = telebot.TeleBot("5617663897:AAF6gy49rlq5lVSNCM2MbZMCUQMSR8WjNO4")
 channel_address = "@pausal_delux"
+
+is_bot_working = True
+refresh_frequency = 60 # in seconds
+is_bot_started = False
+
 
 # Add /help command
 @bot.message_handler(commands=['help'])
@@ -31,31 +37,70 @@ def work_list(message):
     upda.update_data()
     bot.send_message(message.chat.id, upda.get_all_works(),parse_mode= 'Markdown')
 
+@bot.message_handler(commands=['info'])
+def send_info_message(message):
+    message_to_send = ""
+    global is_bot_working
+    global refresh_frequency
+    message_to_send += "*Состояние*: працуе\n" if is_bot_working else "*Состояние*: непрацуе.\n"
+    message_to_send = message_to_send + "*Частота обновления*: " + str(refresh_frequency) + "секунд.\n"
+    bot.send_message(message.chat.id, message_to_send,parse_mode= 'Markdown')
+
+
+# Add /stop command
+@bot.message_handler(commands=['stop'])
+def stop_bot(message):
+    try: remove(path.join("data","parsed_data.json"))
+    except: pass
+    try: remove(path.join("data","refactored_data.json"))
+    except: pass
+    try: remove(path.join("data","old_data.json"))
+    except: pass
+    global is_bot_working
+    is_bot_working = False
+    bot.send_message(message.chat.id, "Чус бус автобус. I'll be  back 😎",parse_mode= 'Markdown')
+
+@bot.message_handler(commands=['continue'])
+def stop_bot(message):
+    global is_bot_working
+    is_bot_working = True
+    bot.send_message(message.chat.id, "Я же говорил, что вернусь 😎",parse_mode= 'Markdown')
+
 # Add /start command
 @bot.message_handler(commands=['start'])
 def send_update(message):
-    start = False
+    global is_bot_started
+    if is_bot_started:
+        bot.send_message(message.chat.id, "Зачем меня запускать, если я уже запущен 🤨",parse_mode= 'Markdown')
+        return
+    global is_bot_working
+    is_bot_working = True
 
     # Add telegram buttons
-    markup=telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
-    item1=telebot.types.KeyboardButton("/help")
-    item2=telebot.types.KeyboardButton("/start")
-    item3=telebot.types.KeyboardButton("/jobs")
-    markup.add(item1,item2,item3)
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    help_button = types.KeyboardButton("/help")
+    start_button = types.KeyboardButton("/start")
+    stop_button = types.KeyboardButton("/stop")
+    jobs_button = types.KeyboardButton("/jobs")
+    info_button = types.KeyboardButton("/info")
+    continue_button = types.KeyboardButton("/continue")
+    markup.add(help_button,start_button,stop_button,continue_button,info_button,jobs_button)
 
     bot.send_message(message.chat.id, "Чус, за паушальчиками пришел, ммм? Советую глянуть раздел /help",reply_markup=markup,parse_mode= 'Markdown')
     import parse_data as pada
     import refactor_data as reda
     import update_data as upda
     while True:
-        pada.generate_data()
-        reda.generate_refactored_data()
-        upda.update_data()
-        message_to_send = upda.get_new_works()
-        if message_to_send != upda.NO_JOBS_MESSAGE or not start:
-            bot.send_message(message.chat.id, message_to_send,parse_mode= 'Markdown')
-            start = True
-        sleep(60)
+        global refresh_frequency
+        if is_bot_working:
+            pada.generate_data()
+            reda.generate_refactored_data()
+            upda.update_data()
+            message_to_send = upda.get_new_works()
+            if message_to_send != upda.NO_JOBS_MESSAGE or not is_bot_started:
+                bot.send_message(message.chat.id, message_to_send,parse_mode= 'Markdown')
+                is_bot_started = True
+        sleep(refresh_frequency)
 
     
 
