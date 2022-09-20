@@ -1,5 +1,6 @@
 import json
 from datetime import datetime, timezone
+import pytz
 from os import path
 
 time_format = "%Y-%m-%dT%H:%M:%S%z"
@@ -12,7 +13,7 @@ def utc_to_local(utc_dt):
     """
     Change timezone to Czech timezone.
     """
-    return utc_dt.replace(tzinfo=timezone.utc).astimezone(tz=None)
+    return utc_dt.replace(tzinfo=timezone.utc).astimezone(tz=pytz.timezone('Europe/Prague'))
 
 def get_message_for_current_work(work):
     """

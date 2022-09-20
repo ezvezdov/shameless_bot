@@ -12,10 +12,11 @@ from datetime import datetime
 def generate_data():
 
     cookies = {
-        '_ga': 'GA1.2.2031000827.1663445701',
-        '_gid': 'GA1.2.1058947656.1663445701',
-        '_fbp': 'fb.1.1663445701426.133793152',
-        'Sinch_app_cookie_shameless_g': 'eue1nvjah1qjvv99lsidmtu4oa',
+        'Sinch_app_cookie_shameless_g': 'f5m5gcup7934kgthjv1l132hp0',
+        '_ga': 'GA1.2.1636079464.1663663307',
+        '_gid': 'GA1.2.587350131.1663663307',
+        '_gat_gtag_UA_29860388_1': '1',
+        '_fbp': 'fb.1.1663663307123.629889463',
     }
 
     headers = {
@@ -24,7 +25,7 @@ def generate_data():
         'accept-language': 'cs-CZ,cs;q=0.9',
         'cache-control': 'max-age=0',
         # Requests sorts cookies= alphabetically
-        # 'cookie': '_ga=GA1.2.2031000827.1663445701; _gid=GA1.2.1058947656.1663445701; _fbp=fb.1.1663445701426.133793152; Sinch_app_cookie_shameless_g=eue1nvjah1qjvv99lsidmtu4oa',
+        # 'cookie': 'Sinch_app_cookie_shameless_g=f5m5gcup7934kgthjv1l132hp0; _ga=GA1.2.1636079464.1663663307; _gid=GA1.2.587350131.1663663307; _gat_gtag_UA_29860388_1=1; _fbp=fb.1.1663663307123.629889463',
         'origin': 'https://shameless.sinch.cz',
         'referer': 'https://shameless.sinch.cz/',
         'sec-ch-ua': '"Google Chrome";v="105", "Not)A;Brand";v="8", "Chromium";v="105"',
@@ -40,16 +41,14 @@ def generate_data():
 
     data = {
         '_method': 'POST',
-        'data[_Token][key]': 'ddac833b7bf6db94cb4b3db93ccace6bf5acca6de161fdd7d476eab1c75e4a414b7a0841071051ebea8bf127049d28adc232dbef129e8adc13062373034966c4',
+        'data[_Token][key]': '18b35c336f342f440d72f4a2c0476ffd22c93b4f6001e0d600fe6843baefe8a66e97f1c9bf79bf9e628064a7c7953f5ca8b5c7566f9d1d1a7c773342b73acbb7',
         'data[User][email]': 'gikexeg799@edxplus.com',
         'data[User][password]': 'cau_lidi0_0',
         'data[_Token][fields]': '9718e2427144cfee59faab3f566e928633c75c75%3A',
         'data[_Token][unlocked]': '',
     }
 
-    response = requests.post('https://shameless.sinch.cz/users/login', cookies=cookies, headers=headers, data=data)
     session = requests.session()
-
 
     login_req = session.post("https://shameless.sinch.cz/users/login", cookies=cookies, headers=headers, data=data)
     if login_req.status_code == 200:
@@ -60,10 +59,10 @@ def generate_data():
         print("Update error :(")
 
     cookies = {
-        '_ga': 'GA1.2.2031000827.1663445701',
-        '_gid': 'GA1.2.1058947656.1663445701',
-        '_fbp': 'fb.1.1663445701426.133793152',
-        'Sinch_app_cookie_shameless_g': '1588v4tnarfbh5on6hmqrinu2n',
+        '_ga': 'GA1.2.1636079464.1663663307',
+        '_gid': 'GA1.2.587350131.1663663307',
+        '_fbp': 'fb.1.1663663307123.629889463',
+        'Sinch_app_cookie_shameless_g': '4gq3bk96p9dh6g30pc5f6cdevr',
     }
 
     headers = {
@@ -72,9 +71,9 @@ def generate_data():
         'accept-language': 'cs-CZ,cs;q=0.9',
         'content-type': 'application/json;charset=UTF-8',
         # Requests sorts cookies= alphabetically
-        # 'cookie': '_ga=GA1.2.2031000827.1663445701; _gid=GA1.2.1058947656.1663445701; _fbp=fb.1.1663445701426.133793152; Sinch_app_cookie_shameless_g=1588v4tnarfbh5on6hmqrinu2n',
+        # 'cookie': '_ga=GA1.2.1636079464.1663663307; _gid=GA1.2.587350131.1663663307; _fbp=fb.1.1663663307123.629889463; Sinch_app_cookie_shameless_g=4gq3bk96p9dh6g30pc5f6cdevr',
         'origin': 'https://shameless.sinch.cz',
-        'referer': 'https://shameless.sinch.cz/react/position?ignoreRating=true',
+        'referer': 'https://shameless.sinch.cz/react/position',
         'sec-ch-ua': '"Google Chrome";v="105", "Not)A;Brand";v="8", "Chromium";v="105"',
         'sec-ch-ua-mobile': '?0',
         'sec-ch-ua-platform': '"Linux"',
@@ -90,9 +89,7 @@ def generate_data():
             'page': 1,
             'limit': 100,
         },
-        'params': {
-            'ignoreRating': True,
-        },
+        'params': {},
     }
 
     response = requests.post('https://shameless.sinch.cz/api', cookies=cookies, headers=headers, json=json_data)
