@@ -3,6 +3,7 @@ from time import sleep
 from os import path, remove
 import telebot
 from telebot import types
+from datetime import datetime
 
 # https://github.com/eternnoir/pyTelegramBotAPI
 # https://habr.com/ru/post/442800/
@@ -19,6 +20,7 @@ channel_address = "@pausal_delux"
 is_bot_working = True
 refresh_frequency = 60 # in seconds
 is_bot_started = False
+start_time = 0
 
 
 # Add /help command
@@ -40,11 +42,23 @@ def work_list(message):
 @bot.message_handler(commands=['info'])
 def send_info_message(message):
     message_to_send = ""
-    global is_bot_working
-    global refresh_frequency
-    message_to_send += "*Состояние*: працуе\n" if is_bot_working else "*Состояние*: непрацуе.\n"
-    message_to_send = message_to_send + "*Частота обновления*: " + str(refresh_frequency) + "секунд.\n"
+    global is_bot_working, refresh_frequency, start_time
+    message_to_send += "*Состояние*: працуе\n" if is_bot_working else "*Состояние*: непрацуе\n"
+    message_to_send = message_to_send + "*Время работы*: " + strfdelta(datetime.now() - start_time,"{days} дней, {hours}:{minutes}:{seconds}\n")
+    message_to_send = message_to_send + "*Частота обновления*: " + str(refresh_frequency) + " секунд\n"
     bot.send_message(message.chat.id, message_to_send,parse_mode= 'Markdown')
+    bot.send_sticker(message.chat.id, sticker="CAACAgIAAxkBAAEYWOBjLNdmC5dclv0jBbXmPPlpUa-q_AACChIAAs0C6EvjoLPI5axr9CkE")
+    
+
+def strfdelta(tdelta, fmt):
+    d = {"days": tdelta.days}
+    d["hours"], rem = divmod(tdelta.seconds, 3600)
+    d["minutes"], d["seconds"] = divmod(rem, 60)
+    
+    d["hours"] = format(d["hours"], '02d')
+    d["minutes"] = format(d["minutes"], '02d')
+    d["seconds"] = format(d["seconds"], '02d')
+    return fmt.format(**d)
 
 
 # Add /stop command
@@ -59,6 +73,7 @@ def stop_bot(message):
     global is_bot_working
     is_bot_working = False
     bot.send_message(message.chat.id, "Чус бус автобус. I'll be  back 😎",parse_mode= 'Markdown')
+    bot.send_sticker(message.chat.id, sticker='CAACAgIAAxkBAAEYWM5jLNUtmN7S293meV95TtQQn61L3gAC3BIAAvMNqUj9BaNVQlopLikE')
 
 @bot.message_handler(commands=['continue'])
 def stop_bot(message):
@@ -69,12 +84,14 @@ def stop_bot(message):
 # Add /start command
 @bot.message_handler(commands=['start'])
 def send_update(message):
-    global is_bot_started
+    global is_bot_started,is_bot_working,start_time
     if is_bot_started:
         bot.send_message(message.chat.id, "Зачем меня запускать, если я уже запущен 🤨",parse_mode= 'Markdown')
         return
-    global is_bot_working
+    # global is_bot_working
     is_bot_working = True
+    # global start_time
+    start_time = datetime.now()
 
     # Add telegram buttons
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -87,6 +104,8 @@ def send_update(message):
     markup.add(help_button,start_button,stop_button,continue_button,info_button,jobs_button)
 
     bot.send_message(message.chat.id, "Чус, за паушальчиками пришел, ммм? Советую глянуть раздел /help",reply_markup=markup,parse_mode= 'Markdown')
+    bot.send_sticker(message.chat.id, sticker="CAACAgIAAxkBAAEYWNxjLNaqnB_SFteoZArPZxE8VwKyMgACBBcAAs_q6UvdZbGbN2nnbikE")
+    
     import parse_data as pada
     import refactor_data as reda
     import update_data as upda
@@ -105,3 +124,4 @@ def send_update(message):
     
 
 bot.infinity_polling()
+
