@@ -155,14 +155,16 @@ def generate_refactored_data():
             try: del refactored_data[id]
             except: pass
             continue
-        for connected_id in refactored_data[id]['connected']:
-            if connected_id in not_accepted_jobs:
-                for id_to_del in refactored_data[id]['connected']:
-                    try: del refactored_data[id_to_del]
+        try:
+            for connected_id in refactored_data[id]['connected']:
+                if connected_id in not_accepted_jobs:
+                    for id_to_del in refactored_data[id]['connected']:
+                        try: del refactored_data[id_to_del]
+                        except: pass
+                    try: del refactored_data[id]
                     except: pass
-                try: del refactored_data[id]
-                except: pass
-                continue
+                    continue
+        except: pass
 
 
     
