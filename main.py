@@ -68,8 +68,6 @@ def stop_bot(message):
     except: pass
     try: remove(path.join("data","refactored_data.json"))
     except: pass
-    try: remove(path.join("data","old_data.json"))
-    except: pass
     global is_bot_working
     is_bot_working = False
     bot.send_message(message.chat.id, "Чус бус автобус. I'll be  back 😎",parse_mode= 'Markdown')
@@ -112,7 +110,10 @@ def send_update(message):
     while True:
         global refresh_frequency
         if is_bot_working:
-            pada.generate_data()
+            try:
+                pada.generate_data()
+            except Exception as e:
+                bot.send_message(message.chat.id, "Короче, произошла какая-то залупа с синхронизацией с сервером шеймлесс. Работа бота может быть ограничена. Текст ошибки \'" + e + "\'.",reply_markup=markup,parse_mode= 'Markdown')
             reda.generate_refactored_data()
             upda.update_data()
             message_to_send = upda.get_new_works()
