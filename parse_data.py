@@ -46,12 +46,17 @@ def generate_data():
     session = requests.session()
 
     login_req = session.post("https://shameless.sinch.cz/users/login", cookies=cookies, headers=headers, data=data)
+
+    logfile = open(path.join('data',"log.txt"), "a")
+
     if login_req.status_code == 200:
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
-        print("Succesfully updated in " + current_time)
+        logfile.write("Succesfully updated in " + current_time + "\n")
     else:
-        print("Update error :(")
+        logfile.write("Update error :(\n")
+    
+    logfile.close()
 
     cookies = {
         '_ga': 'GA1.2.1636079464.1663663307',

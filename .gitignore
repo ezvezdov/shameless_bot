@@ -1,3 +1,4 @@
 __pycache__
 key_pair.pem
 connect.sh
+data/log.txt

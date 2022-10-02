@@ -13,6 +13,8 @@ from datetime import datetime
 with open(path.join('data',"old_data.json"), "w") as outfile:
         json.dump(dict(), outfile)
 
+logfile = open(path.join('data',"log.txt"), "w")
+
 # create telegram bot
 bot = telebot.TeleBot("5617663897:AAF6gy49rlq5lVSNCM2MbZMCUQMSR8WjNO4")
 channel_address = "@pausal_delux"
