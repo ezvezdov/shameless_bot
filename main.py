@@ -29,6 +29,7 @@ start_time = 0
 @bot.message_handler(commands=['help'])
 def send_welcome(message):
     bot.send_message(message.chat.id,"Агой камо, крч все просто. Бот должен каждые 5 минут чекать веб шеймлесс на наличие сочных паушальчиков, чтобы с кайфом годьку отработать и пойти спать с кайфом. Бот присылает сообщение только в том случае, если что-то изменилось, добавилась новая смена или кто-то одгласился со старой. Если что-то пошло по пизде перезапусти бота командой /start. Команда /jobs показыает все паушалы, которые есть в данный момент.",parse_mode= 'Markdown')
+    bot.send_message(message.chat.id,"Команды:\n/help\n/start\n/stop\n/continue\n/info\n/jobs\n",parse_mode= 'Markdown')
 
 # Add /jobs command
 @bot.message_handler(commands=['jobs'])
@@ -49,7 +50,15 @@ def send_info_message(message):
     message_to_send = message_to_send + "*Время работы*: " + strfdelta(datetime.now() - start_time,"{days} дней, {hours}:{minutes}:{seconds}\n")
     message_to_send = message_to_send + "*Частота обновления*: " + str(refresh_frequency) + " секунд\n"
     bot.send_message(message.chat.id, message_to_send,parse_mode= 'Markdown')
-    bot.send_sticker(message.chat.id, sticker="CAACAgIAAxkBAAEYWOBjLNdmC5dclv0jBbXmPPlpUa-q_AACChIAAs0C6EvjoLPI5axr9CkE")
+    
+    logfile = open(path.join('data',"log.txt"), "r")
+    lines = logfile.readlines()
+    last_lines = lines[-10:]
+    str_lines = ""
+    for line in last_lines:
+        str_lines += line
+    bot.send_message(message.chat.id, "Вот тебе еще лог, камо :)\n" + str_lines,parse_mode= 'Markdown')
+
     
 
 def strfdelta(tdelta, fmt):

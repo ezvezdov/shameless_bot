@@ -1,4 +1,5 @@
 import json
+from time import sleep
 import requests
 from os import path
 from datetime import datetime
@@ -7,13 +8,20 @@ from datetime import datetime
 # https://curlconverter.com/
 # https://medium.com/@CodeYogi/how-to-scrape-websites-behind-a-login-with-python-b8e4efa9f5dd
 
+def get_time_now():
+    now = datetime.now()
+    return now.strftime("%d.%m.%Y %H:%M:%S")
 
+def write_log(str):
+    logfile = open(path.join('data',"log.txt"), "a")
+    logfile.write(str)
+    logfile.close()
 
 def generate_data():
 
     cookies = {
     'Sinch_app_cookie_shameless_g': '00smif5kvhl7mtjbltat5fo6dk',
-}
+    }
 
     headers = {
         'authority': 'shameless.sinch.cz',
@@ -44,19 +52,26 @@ def generate_data():
     }
 
     session = requests.session()
-
-    login_req = session.post("https://shameless.sinch.cz/users/login", cookies=cookies, headers=headers, data=data)
-
-    logfile = open(path.join('data',"log.txt"), "a")
-
-    if login_req.status_code == 200:
-        now = datetime.now()
-        current_time = now.strftime("%H:%M:%S")
-        logfile.write("Succesfully updated in " + current_time + "\n")
-    else:
-        logfile.write("Update error :(\n")
     
-    logfile.close()
+    try:
+        login_req = session.post("https://shameless.sinch.cz/users/login", cookies=cookies, headers=headers, data=data)
+    except:
+        login_req = -3
+        write_log("Update error in " + get_time_now() + " :(\n")
+
+    
+
+    while login_req.status_code != 200:
+        sleep(60)
+        try:
+            login_req = session.post("https://shameless.sinch.cz/users/login", cookies=cookies, headers=headers, data=data)
+        except:
+            login_req = -3
+            write_log("Update error in " + get_time_now() + " :(\n")
+
+    write_log("Succesfully updated in " + get_time_now() + "\n")
+    
+    
 
     cookies = {
         '_ga': 'GA1.2.1636079464.1663663307',
