@@ -2,7 +2,8 @@ import json
 from time import sleep
 import requests
 from os import path
-from datetime import datetime
+from datetime import datetime, timezone
+import pytz
 
 # https://stackoverflow.com/questions/23102833/how-to-scrape-a-website-which-requires-login-using-python-and-beautifulsoup
 # https://curlconverter.com/
@@ -10,6 +11,7 @@ from datetime import datetime
 
 def get_time_now():
     now = datetime.now()
+    now = now.replace(tzinfo=timezone.utc).astimezone(tz=pytz.timezone('Europe/Prague'))
     return now.strftime("%d.%m.%Y %H:%M:%S")
 
 def write_log(str):
