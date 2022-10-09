@@ -134,6 +134,5 @@ def send_update(message):
         sleep(refresh_frequency)
 
     
-
-bot.infinity_polling()
+bot.infinity_polling(timeout=10, long_polling_timeout = 5)
 
