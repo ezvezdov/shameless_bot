@@ -81,18 +81,24 @@ def generate_refactored_data():
         tstamp_end = utc_to_local(datetime.strptime(value["endTime"], time_format))
         tstamp_delta = tstamp_end - tstamp_start
 
-        # Continue if job is 5+ hours
-        if tstamp_delta.seconds > (60 * 60 * 5):
-            not_accepted_jobs.append(value['id'])
-            try:
-                not_accepted_jobs += value['connected']
-            except:
-                pass
-            continue
+        date = tstamp_start.strftime("%d.%m.%Y")
+        name = shift[str(value["shift"])]["name"]
+        if("face" in name or date == "01.12.2022"):
+            pass
+        else:
+            # Continue if job is 5+ hours
+            if tstamp_delta.seconds > (60 * 60 * 5):
+                not_accepted_jobs.append(value['id'])
+                try:
+                    not_accepted_jobs += value['connected']
+                except:
+                    pass
+                continue
 
-        # Skip jobs if it's full
-        if value["freeCapacity"] == 0:
-            continue
+            # Skip jobs if it's full
+            if value["freeCapacity"] == 0:
+                continue
+        
 
         work = dict()
         
