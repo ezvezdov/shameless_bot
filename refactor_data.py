@@ -81,10 +81,16 @@ def generate_refactored_data():
         tstamp_end = utc_to_local(datetime.strptime(value["endTime"], time_format))
         tstamp_delta = tstamp_end - tstamp_start
 
-        date = tstamp_start.strftime("%d.%m.%Y")
-        name = shift[str(value["shift"])]["name"]
-        if("face" in name or date == "01.12.2022"):
-            pass
+        ######################################################################################################################
+        # TODO: remove 
+        face_date = tstamp_start.strftime("%d.%m.%Y")
+        face_name = shift[str(value["shift"])]["name"]
+        face_name = face_name.lower()
+        is_face = False
+        if("face" in face_name or face_date == "01.12.2022" or face_date == "30.11.2022" or face_date == "29.11.2022"):
+            # TODO: remove 
+            is_face = True
+        ######################################################################################################################
         else:
             # Continue if job is 5+ hours
             if tstamp_delta.seconds > (60 * 60 * 5):
@@ -150,10 +156,20 @@ def generate_refactored_data():
         # Add whole message
         work['message'] = get_message_for_current_work(work)
         
+        ##########################
+        # TODO: remove
+        work['face'] = is_face
+        ###########################
+
         refactored_data[value['id']] = work
         accepted_jobs.append(value['id'])
 
     for id in accepted_jobs:
+        ##############################
+        # TODO: remove
+        if refactored_data[id]['face']:
+            continue
+        ##############################
         if id in not_accepted_jobs:
             for id_to_del in refactored_data[id]['connected']:
                 try: del refactored_data[id_to_del]
