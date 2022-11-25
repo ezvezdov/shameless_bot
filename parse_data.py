@@ -135,12 +135,6 @@ def generate_data():
         
         f = open(path.join('data','parsed_data.json'))
         parsed_data = json.load(f)
-        
-    write_log("Succesfully updated in " + get_time_now() + "\n")
-        
-    
-
-    
 
     
     
