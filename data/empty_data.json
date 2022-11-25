@@ -1,0 +1,14 @@
+{
+    "entities": {
+        "Position": []
+    },
+    "result": {
+        "positionIds": [],
+        "featuredPositionIds": []
+    },
+    "meta": {
+        "count": 0,
+        "files": []
+    },
+    "messages": []
+}

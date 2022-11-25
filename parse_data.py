@@ -9,6 +9,10 @@ import pytz
 # https://curlconverter.com/
 # https://medium.com/@CodeYogi/how-to-scrape-websites-behind-a-login-with-python-b8e4efa9f5dd
 
+f = open(path.join('data','empty_data.json'))
+empty_data = json.load(f)
+
+
 def get_time_now():
     now = datetime.now()
     now = now.replace(tzinfo=timezone.utc).astimezone(tz=pytz.timezone('Europe/Prague'))
@@ -76,30 +80,25 @@ def generate_data():
     
 
     cookies = {
-        '_ga': 'GA1.2.1636079464.1663663307',
-        '_gid': 'GA1.2.587350131.1663663307',
-        '_fbp': 'fb.1.1663663307123.629889463',
-        'Sinch_app_cookie_shameless_g': '4gq3bk96p9dh6g30pc5f6cdevr',
+        'Sinch_app_cookie_shameless_g': 'l2e1o1rjp8qi1v2vlua9fd9nqb',
     }
 
     headers = {
-    'authority': 'shameless.sinch.cz',
-    'accept': 'application/json, text/plain, */*',
-    'accept-language': 'cs-CZ,cs;q=0.9,ru-BY;q=0.8,ru;q=0.7,be-BY;q=0.6,be;q=0.5,en-US;q=0.4,en;q=0.3',
-    'baggage': 'sentry-environment=production,sentry-release=1.38.3,sentry-public_key=daf1e1519a034b19b5aff38211bc0012,sentry-trace_id=3a1afc5c56f64588a80e7476f7bff1e9,sentry-sample_rate=0.25',
-    'content-type': 'application/json;charset=UTF-8',
-    # 'cookie': 'Sinch_app_cookie_shameless_g=00smif5kvhl7mtjbltat5fo6dk',
-    'origin': 'https://shameless.sinch.cz',
-    'referer': 'https://shameless.sinch.cz/react/position?ignoreRating=true',
-    'sec-ch-ua': '"Google Chrome";v="105", "Not)A;Brand";v="8", "Chromium";v="105"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"Linux"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-origin',
-    'sentry-trace': '3a1afc5c56f64588a80e7476f7bff1e9-81b77e5fac239fb2-0',
-    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
-}
+        'authority': 'shameless.sinch.cz',
+        'accept': 'application/json, text/plain, */*',
+        'accept-language': 'cs-CZ,cs;q=0.9,ru-BY;q=0.8,ru;q=0.7,be-BY;q=0.6,be;q=0.5,en-US;q=0.4,en;q=0.3',
+        'content-type': 'application/json;charset=UTF-8',
+        # 'cookie': 'Sinch_app_cookie_shameless_g=l2e1o1rjp8qi1v2vlua9fd9nqb',
+        'origin': 'https://shameless.sinch.cz',
+        'referer': 'https://shameless.sinch.cz/react/position?ignoreCapacity=true&ignoreRating=true',
+        'sec-ch-ua': '"Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Linux"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+    }
 
     json_data = {
         'key': 'worker/Positions/Index',
@@ -107,14 +106,43 @@ def generate_data():
             'page': 1,
             'limit': 100,
         },
-        'params': {},
+        'params': {
+            'ignoreCapacity': True,
+            'ignoreRating': True,
+            'attend': True,
+        },
     }
 
+
     response = session.post('https://shameless.sinch.cz/api', cookies=cookies, headers=headers, json=json_data)
-
     parsed = json.loads(response.content)
-
     json_object = json.dumps(parsed, indent=4)
+    with open(path.join('data',"parsed_data.json"), "w") as outfile:
+            outfile.write(json_object)
+        
+    f = open(path.join('data','parsed_data.json'))
+    parsed_data = json.load(f)
+
+    while(response.status_code != 200 or parsed_data == empty_data):
+        write_log("Update error in " + get_time_now() + " :(\n")
+        sleep(30)
+        response = session.post('https://shameless.sinch.cz/api', cookies=cookies, headers=headers, json=json_data)
+        parsed = json.loads(response.content)
+        json_object = json.dumps(parsed, indent=4)
+
+        with open(path.join('data',"parsed_data.json"), "w") as outfile:
+            outfile.write(json_object)
+        
+        f = open(path.join('data','parsed_data.json'))
+        parsed_data = json.load(f)
+        
+    write_log("Succesfully updated in " + get_time_now() + "\n")
+        
+    
+
+    
+
+    
     
     # Writing to sample.json
     with open(path.join('data',"parsed_data.json"), "w") as outfile:
