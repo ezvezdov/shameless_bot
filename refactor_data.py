@@ -87,7 +87,7 @@ def generate_refactored_data():
         face_name = shift[str(value["shift"])]["name"]
         face_name = face_name.lower()
         is_face = False
-        if("face" in face_name or face_date == "01.12.2022" or face_date == "30.11.2022" or face_date == "29.11.2022"):
+        if("oxxxymiron" in face_name or face_date == "16.03.2023" or face_date == "17.03.2023" or face_date == "18.03.2023"):
             # TODO: remove 
             is_face = True
         ######################################################################################################################
@@ -158,7 +158,7 @@ def generate_refactored_data():
         
         ##########################
         # TODO: remove
-        work['face'] = is_face
+        work['oxxxymiron'] = is_face
         ###########################
 
         refactored_data[value['id']] = work
@@ -167,7 +167,7 @@ def generate_refactored_data():
     for id in accepted_jobs:
         ##############################
         # TODO: remove
-        if refactored_data[id]['face']:
+        if refactored_data[id]['oxxxymiron']:
             continue
         ##############################
         if id in not_accepted_jobs:
